@@ -53,8 +53,17 @@ cache-control: no-cache,no-store,max-age=0,must-revalidate
         }
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
 
-        writer.write("HTTP/1.1 " + status + '\n' + "status: " + status + '\n');
-        writer.write("content-type: " + headers + "\n" + " cache-control: " + body);
+        writer.write("HTTP/1.1 " + status);
+        writer.newLine();
+        writer.write(String.valueOf(status));
+        writer.newLine();
+        writer.write(String.valueOf(headers));
+        writer.newLine();
+        writer.newLine();
+        writer.write(body);
+        writer.newLine();
+        writer.newLine();
+        writer.newLine();
         writer.flush();
 
 //        throw new UnsupportedOperationException();
