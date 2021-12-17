@@ -55,7 +55,7 @@ cache-control: no-cache,no-store,max-age=0,must-revalidate
 
         writer.write("HTTP/1.1 " + status);
         writer.newLine();
-        writer.write(String.valueOf(status));
+        writer.write(status);
         writer.newLine();
         writer.write(headers.toString());
         writer.newLine();
