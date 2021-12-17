@@ -57,15 +57,13 @@ cache-control: no-cache,no-store,max-age=0,must-revalidate
         writer.newLine();
         writer.write(String.valueOf(status));
         writer.newLine();
-        writer.write(String.valueOf(headers));
+        writer.write(headers.toString());
         writer.newLine();
         writer.newLine();
         writer.write(body);
         writer.newLine();
         writer.newLine();
-        writer.newLine();
         writer.flush();
-
 //        throw new UnsupportedOperationException();
     }
 
